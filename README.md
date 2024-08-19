@@ -3,7 +3,6 @@
 
 <ul>
   <li>React(Hooks), Vite</li>
-  <li>react-dom</li>
   <li>react-router-dom(createBrowserRouter)</li>
   <li>react-accessible-accordion</li>
   <li>react-error-boundary</li>
