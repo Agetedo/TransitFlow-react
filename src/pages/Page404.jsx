@@ -7,17 +7,6 @@ import message404 from "/message404.png";
 import "..//styles/ButtonLight.scss";
 import "..//styles/Page404.scss";
 
-function Message404({ buttonText }) {
-    return(
-        <div className="message404">
-            <img src={message404} alt="#" />
-            <Link to={PathConstants.HOME} className="button-light">
-              {buttonText}
-            </Link>
-        </div>
-    )
-}
-
 export default function Page404() {
     return (
         <>
@@ -28,4 +17,14 @@ export default function Page404() {
             </Conteiner>
         </>
     );
+}
+function Message404({ buttonText }) {
+    return(
+        <div className="message404">
+            <img src={message404} alt="#" />
+            <Link to={PathConstants.HOME} className="button-light">
+              {buttonText}
+            </Link>
+        </div>
+    )
 }
