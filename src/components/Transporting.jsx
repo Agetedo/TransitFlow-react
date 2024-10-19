@@ -5,6 +5,30 @@ import { transportingCards } from "../DataBase/transportingCards.js";
 import ButtonDark from "./ButtonDark";
 import "..//styles/Transporting.scss";
 
+export default function Transporting() {
+  const [moreWorks, setMoreWorks] = useState(false);
+
+  function handleMoreWorks() {
+    setMoreWorks(!moreWorks);
+  }
+
+  return (
+    <TransportingWrapper className={"transporting"}>
+      <TitleCenter 
+        caption={"Works"}
+        title={"Transporting Across The World"}
+      />
+      <TransportingItems />
+      {moreWorks && <TransportingItems />}
+      <TransportingButton
+        buttonText={moreWorks ? "Hide Works" : "More Works"} 
+        type="button" 
+        onClick={handleMoreWorks}
+      />
+    </TransportingWrapper>
+  );
+} 
+
 function TransportingWrapper ({ className, children }) {
   return(
     <div className={className}>
@@ -39,27 +63,3 @@ function TransportingButton({ buttonText, type, onClick }) {
     </div>
   );
 }
-
-export default function Transporting() {
-  const [moreWorks, setMoreWorks] = useState(false);
-
-  function handleMoreWorks() {
-    setMoreWorks(!moreWorks);
-  }
-
-  return (
-    <TransportingWrapper className={"transporting"}>
-      <TitleCenter 
-        caption={"Works"}
-        title={"Transporting Across The World"}
-      />
-      <TransportingItems />
-      {moreWorks && <TransportingItems />}
-      <TransportingButton
-        buttonText={moreWorks ? "Hide Works" : "More Works"} 
-        type="button" 
-        onClick={handleMoreWorks}
-      />
-    </TransportingWrapper>
-  );
-} 
