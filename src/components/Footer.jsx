@@ -12,6 +12,18 @@ const footerText = <>{"Leverage agile frameworks to provide a robust synopsis fo
 const copyrightText = <>{"© "}</>;
 const rightText = <>{" TransitFlow. All Rights reserved."}</>;
 
+export default function Footer() {
+  return (
+    <FooterConteiner>
+      <FooterItems />
+      <FooterCopyright 
+        text={copyrightText}
+        rights={rightText}
+      />
+    </FooterConteiner>
+  );
+}
+
 function FooterLogo({ imgAlt }) {
   return(
     <Link to={PathConstants.HOME} className="footer-logo__link">
@@ -167,17 +179,5 @@ function FooterCopyright({ text, rights }) {
       <p className="copyright-text">{text}{new Date().getFullYear()}{rights}</p>
       <FooterSocialMenu />
     </div>
-  );
-}
-
-export default function Footer() {
-  return (
-    <FooterConteiner>
-      <FooterItems />
-      <FooterCopyright 
-        text={copyrightText}
-        rights={rightText}
-      />
-    </FooterConteiner>
   );
 }
