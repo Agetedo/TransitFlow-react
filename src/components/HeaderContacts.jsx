@@ -3,6 +3,14 @@ import { headerContacts } from "../DataBase/headerContacts";
 import Conteiner from "./Conteiner";
 import "..//styles/HeaderContacts.scss";
 
+export default function HeaderContacts() {
+  return(
+    <Conteiner className={"header-contacts"}>
+      <ContactItems />
+    </Conteiner>
+  );
+}
+
 const headerContactsList = headerContacts.map(contact => 
   <div className="header-contact" key={contact.id}>
     <img src={contact.imgSrc} alt={contact.imgAlt} />
@@ -16,13 +24,5 @@ function ContactItems() {
       <HeaderLogo imgAlt={"TransitFlow logo"} />
       <div className="contacts__items">{headerContactsList}</div>
     </div>
-  );
-}
-
-export default function HeaderContacts() {
-  return(
-    <Conteiner className={"header-contacts"}>
-      <ContactItems />
-    </Conteiner>
   );
 }
