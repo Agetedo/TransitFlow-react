@@ -118,7 +118,7 @@
 .tab-panel__link {
   @extend %dark-blue-button;
 }
-//---@media-about-us--------------
+//---@media-about-us----------------
 @media (hover: hover) and (pointer: fine) {
   .react-tabs__tab:hover {
     animation: yellow-color-change 0.5s linear infinite alternate both;
