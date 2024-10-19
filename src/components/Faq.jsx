@@ -16,6 +16,31 @@ import modalCloseIcon from "/svg/modal-close-icon.svg";
 import RequestCallForm from "./RequestCallForm.jsx";
 import "..//styles/Faq.scss";
 
+export default function Faq() {
+  const [showRequestСall, setShowRequestСall] = useState(false);
+  useEffect(() => {
+    if (showRequestСall) {
+      document.body.style.overflow = "hidden";
+    }
+    else {
+      document.body.style.overflowY = "scroll";
+    }
+  }, [showRequestСall])
+
+  return (
+    <Conteiner className={"faq"}>
+      <TitleLeft 
+        caption={"FAQ"}
+        title={"Frequently Asked Questions"}
+      />
+      <FaqItems onClick={() => setShowRequestСall(true)}/>
+      {showRequestСall && createPortal(
+        <RequestСall onClose={() => setShowRequestСall(false)}/>, 
+      document.body )}
+    </Conteiner>
+  );
+}
+
 function PhoneContact({ iconAlt, text }) {
   return(
     <div className="phone__contact">
@@ -71,30 +96,5 @@ function RequestСall({ onClose }) {
         <RequestCallForm />
       </div>
     </div>
-  );
-}
-
-export default function Faq() {
-  const [showRequestСall, setShowRequestСall] = useState(false);
-  useEffect(() => {
-    if (showRequestСall) {
-      document.body.style.overflow = "hidden";
-    }
-    else {
-      document.body.style.overflowY = "scroll";
-    }
-  }, [showRequestСall])
-
-  return (
-    <Conteiner className={"faq"}>
-      <TitleLeft 
-        caption={"FAQ"}
-        title={"Frequently Asked Questions"}
-      />
-      <FaqItems onClick={() => setShowRequestСall(true)}/>
-      {showRequestСall && createPortal(
-        <RequestСall onClose={() => setShowRequestСall(false)}/>, 
-      document.body )}
-    </Conteiner>
   );
 }
