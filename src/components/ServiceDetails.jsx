@@ -4,6 +4,44 @@ import playButton from "/play-button.png";
 import { servicesBenefitList } from "../DataBase/servicesBenefitList.js";
 import "..//styles/ServiceDetails.scss";
 
+export default function ServiceDetails(
+  { imgSrc01, imgAlt01, 
+    iconSrc, title01, 
+    text01, text02, 
+    title02, text03, imgSrc02, imgAlt02,
+    title03, text04, text05, src,
+  }) {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  return (
+    <Conteiner className={"service-details"}>
+      <img src={imgSrc01} alt={imgAlt01} />
+      <ServiceTitle 
+        iconSrc={iconSrc}
+        title01={title01}
+      />
+      <ServiceText 
+        text01={text01}
+        text02={text02}
+      />
+      <ServiceBenefit 
+        title02={title02}
+        text03={text03}
+        imgSrc02={imgSrc02}
+        imgAlt02={imgAlt02}
+      />
+      <ServiceVideo 
+        title03={title03}
+        text04={text04}
+        text05={text05}
+      />  
+      <VideoPlayer isPlaying={isPlaying} src={src} 
+        onClick={() => setIsPlaying(!isPlaying)}
+      />
+    </Conteiner>
+  );
+}
+
 function ServiceTitle({ iconSrc, title01 }) {
   return(
     <div className="service-title__items">
@@ -12,6 +50,7 @@ function ServiceTitle({ iconSrc, title01 }) {
     </div>
   );
 }
+
 function ServiceText({ text01, text02 }) {
   return(
     <div className="service-text__items">
@@ -70,43 +109,5 @@ function ServiceVideo({ title03, text04, text05 }) {
       <p className="text">{text04}</p>
       <p className="text">{text05}</p>
     </div>
-  );
-}
-
-export default function ServiceDetails(
-  { imgSrc01, imgAlt01, 
-    iconSrc, title01, 
-    text01, text02, 
-    title02, text03, imgSrc02, imgAlt02,
-    title03, text04, text05, src,
-  }) {
-  const [isPlaying, setIsPlaying] = useState(false);
-
-  return (
-    <Conteiner className={"service-details"}>
-      <img src={imgSrc01} alt={imgAlt01} />
-      <ServiceTitle 
-        iconSrc={iconSrc}
-        title01={title01}
-      />
-      <ServiceText 
-        text01={text01}
-        text02={text02}
-      />
-      <ServiceBenefit 
-        title02={title02}
-        text03={text03}
-        imgSrc02={imgSrc02}
-        imgAlt02={imgAlt02}
-      />
-      <ServiceVideo 
-        title03={title03}
-        text04={text04}
-        text05={text05}
-      />  
-      <VideoPlayer isPlaying={isPlaying} src={src} 
-        onClick={() => setIsPlaying(!isPlaying)}
-      />
-    </Conteiner>
   );
 }
