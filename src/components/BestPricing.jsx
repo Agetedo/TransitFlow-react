@@ -9,6 +9,32 @@ import modalCloseIcon from "/svg/modal-close-icon.svg";
 import choosePlanIcon from "/bestprice-icon.png";
 import "..//styles/BestPricing.scss";
 
+export default function BestPricing() {
+ const [showChoosePlan, setShowChoosePlan] = useState(false);
+  useEffect(() => {
+    if (showChoosePlan) {
+      document.body.style.overflow = "hidden";
+    }
+    else {
+      document.body.style.overflowY = "scroll";
+    }
+  }, [showChoosePlan])
+
+  return (
+    <Conteiner className={"best-pricing"}>
+      <TitleCenter 
+        caption={"Pricing"}
+        title={"Our Best Pricing"}
+      />
+      <PlanCards />
+      <ButtonDark buttonText={"Choose Plan"} type={"button"} onClick={() => setShowChoosePlan(true)} />
+      {showChoosePlan && createPortal(
+        <ChoosePlan onClose={() => setShowChoosePlan(false)}/>, 
+      document.body )}
+    </Conteiner>
+  );
+}
+
 function PlanChooseForm({ basic, standart, premium }) {
   const { register, handleSubmit, formState: { errors }, } = useForm();
   const onSubmit = (data) => { console.log(data); };
@@ -100,31 +126,5 @@ function ChoosePlan({ onClose }) {
         <PlanChooseForm basic={"BASIC"} standart={"STANDART"} premium={"PREMIUM"} />
       </div>
     </div>
-  );
-}
-
-export default function BestPricing() {
- const [showChoosePlan, setShowChoosePlan] = useState(false);
-  useEffect(() => {
-    if (showChoosePlan) {
-      document.body.style.overflow = "hidden";
-    }
-    else {
-      document.body.style.overflowY = "scroll";
-    }
-  }, [showChoosePlan])
-
-  return (
-    <Conteiner className={"best-pricing"}>
-      <TitleCenter 
-        caption={"Pricing"}
-        title={"Our Best Pricing"}
-      />
-      <PlanCards />
-      <ButtonDark buttonText={"Choose Plan"} type={"button"} onClick={() => setShowChoosePlan(true)} />
-      {showChoosePlan && createPortal(
-        <ChoosePlan onClose={() => setShowChoosePlan(false)}/>, 
-      document.body )}
-    </Conteiner>
   );
 }
