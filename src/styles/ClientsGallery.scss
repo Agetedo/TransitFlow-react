@@ -19,7 +19,7 @@
   background-color: var(--yellow-color); 
   display: none;
 }
-//---@media clients-----------------
+//---@media clients----------------
 @media (hover: hover) and (pointer: fine) {
   .client-link:hover .client__logo {
     display: flex;
