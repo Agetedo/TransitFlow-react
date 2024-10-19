@@ -62,7 +62,7 @@
   text-wrap: pretty;
   color: var(--error-message-text-color);
 }
-//---@media-request-form--------------
+//---@media-request-form---------------
 @media(max-width: 768px) {
   #requestFormIcon {
     width: calc(50px + (80 - 50)*((100vw - 320px)/(768 - 320)));
