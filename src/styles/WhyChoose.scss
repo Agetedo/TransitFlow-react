@@ -50,7 +50,7 @@
   text-transform: capitalize;
   color: var(--dark-blue-text-color);
 }
-//---@media-why-choose-----------------
+//---@media-why-choose----------------
 @media(max-width: 1697px) {
   .why-choose__items {
     gap: calc(30px + (53 - 30)*((100vw - 320px)/(1697 - 320)));
