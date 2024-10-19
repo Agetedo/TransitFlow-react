@@ -3,15 +3,6 @@ import ButtonDark from "./ButtonDark.jsx";
 import requestFormIcon from "/svg/line-md_phone-call-twotone-loop.svg";
 import "..//styles/RequestCallForm.scss";
 
-function CallFormTitle({ title }) {
-  return(
-    <>
-      <img src={requestFormIcon} alt="#" id="requestFormIcon"/>
-      <h3 className="request-form__title">{title}</h3>
-    </>
-  );
-}
-
 export default function RequestCallForm() {
   const callFormTitle = <>{"Leave Your phone number and TransitFlow will call You back!"}</>
   const { register, handleSubmit, formState: { errors }, } = useForm();
@@ -89,5 +80,14 @@ export default function RequestCallForm() {
       )}
       <ButtonDark type="submit" buttonText={"Call Me Back!"}/>
     </form>
+  );
+}
+
+function CallFormTitle({ title }) {
+  return(
+    <>
+      <img src={requestFormIcon} alt="#" id="requestFormIcon"/>
+      <h3 className="request-form__title">{title}</h3>
+    </>
   );
 }
