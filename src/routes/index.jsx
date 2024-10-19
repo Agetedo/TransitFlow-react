@@ -43,4 +43,5 @@ const routes = [
     { path: PathConstants.PROJECTDETAILS05, element: <ProjectDetails05 /> },
     { path: PathConstants.PROJECTDETAILS06, element: <ProjectDetails06 /> },
 ]
+
 export default routes;
