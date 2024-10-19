@@ -7,6 +7,14 @@ import "..//styles/WhyUs.scss";
 const text01 = <>{"In augue ligula, feugiat ut nulla consequat. Ut est lacus, molestie in arcu no, iaculis vehicula ipsum. Nunc faucibus, nisl id dapibus finibus, enim diam interdum."}</>;
 const text02 = <>{"In augue ligula, feugiat ut nulla consequat. Ut est lacus, molestie in arcu no, iaculis vehicula ipsum."}</>;
 
+export default function WhyUs({ className }) {
+  return (
+    <Conteiner className={className}>
+      <WhyUsItems/>
+    </Conteiner>
+  );
+} 
+
 function WhyUsText ({ text01, text02 }) {
   return(
     <>
@@ -22,15 +30,15 @@ const whyUsProfitsList = whyUsProfits.map(profit =>
   </div>
 );
 function WhyUsImages () {
-    return(
-        <div id="whyUsImages">
-            <img src={whyUsImage01} alt="Airplane on the runway" />
-            <img src={whyUsImage02} 
-              id="whyUsImage02"
-              alt="Girl in a room with cardboard boxes" 
-            />
-        </div> 
-    );
+  return(
+    <div id="whyUsImages">
+      <img src={whyUsImage01} alt="Airplane on the runway" />
+      <img src={whyUsImage02} 
+        id="whyUsImage02"
+        alt="Girl in a room with cardboard boxes" 
+      />
+    </div> 
+  );
 }
 function WhyUsItems() {
   return(
@@ -50,11 +58,3 @@ function WhyUsItems() {
     </div>
   );
 }
-
-export default function WhyUs({ className }) {
-  return (
-    <Conteiner className={className}>
-      <WhyUsItems/>
-    </Conteiner>
-  );
-} 
