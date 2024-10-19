@@ -6,6 +6,31 @@ import { weDoItems } from "../DataBase/weDoItems.js";
 import ButtonDark from "./ButtonDark.jsx";
 import "..//styles/WeDo.scss";
 
+export default function WeDo({ className }) {
+  const [showMoreWorks, setShowMoreWorks] = useState(false);
+
+  function handleMoreWorks() {
+    setShowMoreWorks(!showMoreWorks);
+  }
+
+  return (
+    <Conteiner className={className} >
+      <TitleCenter 
+        caption={"What We Do"}
+        title={"Our Logistics Services"}
+      />
+      <WeDoItems />
+
+      {showMoreWorks && <WeDoItems />}
+      <MoreWorksButton 
+        buttonText={showMoreWorks ? "Hide Latest" : "More Works"} 
+        type="button" 
+        onClick={handleMoreWorks}
+      />
+    </Conteiner>
+  );
+}
+
 const weDoList = weDoItems.map(item => 
   <section key={item.id} className="we-do__item">
     <Link to={item.linkTo} className="we-do__link">
@@ -32,28 +57,3 @@ function MoreWorksButton({ buttonText, type, onClick }) {
     </div>
   );
 }
-
-export default function WeDo({ className }) {
-  const [showMoreWorks, setShowMoreWorks] = useState(false);
-
-  function handleMoreWorks() {
-    setShowMoreWorks(!showMoreWorks);
-  }
-
-  return (
-    <Conteiner className={className} >
-      <TitleCenter 
-        caption={"What We Do"}
-        title={"Our Logistics Services"}
-      />
-      <WeDoItems />
-
-      {showMoreWorks && <WeDoItems />}
-      <MoreWorksButton 
-        buttonText={showMoreWorks ? "Hide Latest" : "More Works"} 
-        type="button" 
-        onClick={handleMoreWorks}
-      />
-    </Conteiner>
-  );
-} 
