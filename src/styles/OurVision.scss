@@ -42,7 +42,7 @@
   border-left: 15px solid var(--yellow-color);
   border-radius: 25% 0% 0% 0%;
 }
-//---@media-vision---------------
+//---@media-vision--------------
 @media(max-width: 1228px) {
   .vision {
     margin-top: calc(36px + (100 - 36)*((100vw - 320px)/(1228 - 320)));
