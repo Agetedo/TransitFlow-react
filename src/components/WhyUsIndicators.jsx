@@ -2,7 +2,6 @@ import { whyUsIndicators } from "../DataBase/whyUsIndicators";
 import "..//styles/WhyUsIndicators.scss";
 
 export default function WhyUsIndicators() {
-
   const whyUsIndicatorsList = whyUsIndicators.map(indicator => 
     <div className="indicator" key={indicator.id}>
       <div className="indicator__wrapper">
