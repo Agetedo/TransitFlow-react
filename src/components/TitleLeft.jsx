@@ -1,5 +1,4 @@
 import "..//styles/TitleLeft.scss";
-
 export default function TitleLeft({ caption, title }) {
   return (
     <div className="title__left">
