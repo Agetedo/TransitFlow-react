@@ -20,7 +20,7 @@
     text-wrap: pretty;
   }
 } 
-//---@media-title__left---------------
+//---@media-title__left----------------
 @media(max-width: 1228px) {
   .title__left .title {
     margin-top: calc(7px + (15 - 7)*((100vw - 320px)/(1228 - 320)));
