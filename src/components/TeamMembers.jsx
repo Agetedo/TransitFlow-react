@@ -6,6 +6,19 @@ import PathConstants from "../routes/pathConstants";
 import "..//styles/Transporters.scss";
 import "..//styles/TeamMembers.scss";
 
+export default function TeamMembers() {
+  return (
+    <Conteiner className={"team-members"}>
+      <TitleCenter 
+        caption={"The Transporters"}
+        title={"Meet Expert Team"}
+      />
+      <TransportersItems />
+      <TeamButton buttonText={"See More"} />
+    </Conteiner>
+  );
+} 
+
 const heads = transporters.filter(member =>
   member.position.includes("Head")
 );
@@ -37,16 +50,3 @@ function TeamButton({ buttonText }) {
     </div>
   );
 }
-
-export default function TeamMembers() {
-  return (
-    <Conteiner className={"team-members"}>
-      <TitleCenter 
-        caption={"The Transporters"}
-        title={"Meet Expert Team"}
-      />
-      <TransportersItems />
-      <TeamButton buttonText={"See More"} />
-    </Conteiner>
-  );
-} 
