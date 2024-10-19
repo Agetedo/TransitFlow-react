@@ -6,45 +6,6 @@ import tfLogo from "/tf-logo.png";
 import HeaderConteiner from "./HeaderConteiner";
 import "..//styles/Header.scss";
 
-const headerSocialList = headerSocialMenu.map(item => 
-  <li key={item.id} className="social-menu__item">
-    <Link to={item.linkTo} rel="noopener" target="_blank" className="social-menu__link">
-      <img src={item.imgSrc} alt="#" />
-    </Link>
-  </li>
-);
-
-function HeaderSocialMenu() {
-  return(
-    <nav className="social__menu">
-      <ul className="social-menu__list">{headerSocialList}</ul>
-    </nav>
-  );
-}
-function HeaderButton({ buttonText }) {
-  return(
-    <Link to={PathConstants.PRICINGPAGE} className="header-button">
-      {buttonText}
-    </Link>
-  );
-}
-function HeaderLinks({ buttonText }) {
-  return(
-    <div className="header-links__items">
-      <HeaderSocialMenu />
-      <HeaderButton buttonText={buttonText} />
-    </div>
-  );
-}
-
-function LogoMobile({ imgAlt }) {
-  return(
-    <Link to={PathConstants.HOME} className="logo-mobile">
-      <img src={tfLogo} alt={imgAlt} />
-    </Link>
-  );
-}
-
 export default function Header({ imageUrl }) {
   const [nav, setNav] = useState(false);
 
@@ -87,5 +48,44 @@ export default function Header({ imageUrl }) {
         <HeaderLinks buttonText={"Best Pricing"} />
       </div>
     </HeaderConteiner>
+  );
+}
+
+const headerSocialList = headerSocialMenu.map(item => 
+  <li key={item.id} className="social-menu__item">
+    <Link to={item.linkTo} rel="noopener" target="_blank" className="social-menu__link">
+      <img src={item.imgSrc} alt="#" />
+    </Link>
+  </li>
+);
+
+function HeaderSocialMenu() {
+  return(
+    <nav className="social__menu">
+      <ul className="social-menu__list">{headerSocialList}</ul>
+    </nav>
+  );
+}
+function HeaderButton({ buttonText }) {
+  return(
+    <Link to={PathConstants.PRICINGPAGE} className="header-button">
+      {buttonText}
+    </Link>
+  );
+}
+function HeaderLinks({ buttonText }) {
+  return(
+    <div className="header-links__items">
+      <HeaderSocialMenu />
+      <HeaderButton buttonText={buttonText} />
+    </div>
+  );
+}
+
+function LogoMobile({ imgAlt }) {
+  return(
+    <Link to={PathConstants.HOME} className="logo-mobile">
+      <img src={tfLogo} alt={imgAlt} />
+    </Link>
   );
 }
