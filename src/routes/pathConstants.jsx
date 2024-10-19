@@ -19,4 +19,5 @@ const PathConstants = {
     PROJECTDETAILS05: "/project-details05-page",
     PROJECTDETAILS06: "/project-details06-page",
 }
+
 export default PathConstants;
