@@ -6,6 +6,19 @@ import PathConstants from "../routes/pathConstants";
 import "..//styles/OurBlog.scss";
 import "..//styles/LatestPosts.scss";
 
+export default function LatestPosts() {
+  return (
+    <Conteiner className={"latest-posts"}>
+      <TitleCenter 
+        caption={"Our Blog"}
+        title={"Our Latest News"}
+      />
+      <BlogItems />
+      <LatestPostsButton buttonText={"More Blog"}/>
+    </Conteiner>
+  );
+} 
+
 const latestData = ["25 March","28 March", "30 March"];
 const latest = blogPosts.filter(data =>
   latestData.some(i => data.postData.includes(i))
@@ -37,24 +50,11 @@ function BlogItems() {
 }
 
 function LatestPostsButton({ buttonText }) {
-    return(
-        <div className="latest-posts__button">
-            <Link to={PathConstants.BLOGPAGE} className="link">
-              {buttonText}
-            </Link> 
-        </div>
-    );
-}
-
-export default function LatestPosts() {
-  return (
-    <Conteiner className={"latest-posts"}>
-      <TitleCenter 
-        caption={"Our Blog"}
-        title={"Our Latest News"}
-      />
-      <BlogItems />
-      <LatestPostsButton buttonText={"More Blog"}/>
-    </Conteiner>
+  return(
+    <div className="latest-posts__button">
+      <Link to={PathConstants.BLOGPAGE} className="link">
+        {buttonText}
+      </Link> 
+    </div>
   );
-} 
+}
