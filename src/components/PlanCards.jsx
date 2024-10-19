@@ -12,6 +12,7 @@ export default function PlanCards() {
       <p className="text">{card.realTime}</p>
     </div>
   )
+  
   return(
     <div className="best-pricing__items">{pricingCardsList}</div>
   );
