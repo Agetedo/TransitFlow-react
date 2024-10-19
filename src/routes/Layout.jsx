@@ -5,15 +5,6 @@ import Loader from "../components/Loader.jsx";
 import Footer from "../components/Footer.jsx";
 import { ErrorBoundary } from "react-error-boundary";
 
-function ErrorDemo() {
-  return(
-    <p style={{ color: "red", textAlign: "center", fontSize: 20, 
-      lineHeight: 2, paddingTop: 200, paddingLeft: 15, paddingRight: 15, }}>
-      Something went wrong. Please try starting it again!
-    </p>
-  );
-}
-
 export default function Layout() {
   return (
     <>
@@ -27,5 +18,13 @@ export default function Layout() {
         <Footer />
       </ErrorBoundary>
     </>
+  );
+}
+function ErrorDemo() {
+  return(
+    <p style={{ color: "red", textAlign: "center", fontSize: 20, 
+      lineHeight: 2, paddingTop: 200, paddingLeft: 15, paddingRight: 15, }}>
+      Something went wrong. Please try starting it again!
+    </p>
   );
 }
