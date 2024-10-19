@@ -4,7 +4,6 @@ import { liecenses } from "../DataBase/liecenses";
 import "..//styles/AssetsLiecenses.scss";
 
 export default function AssetsLiecenses() {
-
   const liecensesList = liecenses.map(liecense => 
     <div className="assets-liecense__item" key={liecense.id}>
       <h4 className="caption">{liecense.caption}</h4>
