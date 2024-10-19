@@ -4,7 +4,6 @@ import { projectMenu } from "../DataBase/projectMenu";
 import "..//styles/ProjectMenu.scss";
 
 export default function ProjectMenu() {
-
   const projectMenuListList = projectMenu.map( menuItem => 
     <Link key={menuItem.id} to={menuItem.linkTo} className="project__link">
       <img src={menuItem.imgSrc} alt={menuItem.imgAlt} />
