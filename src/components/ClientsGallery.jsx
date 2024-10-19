@@ -10,7 +10,6 @@ import "swiper/scss/keyboard";
 import "..//styles/ClientsGallery.scss";
 
 export default function ClientsGallery() {
-  
   const clientsList = clients.map(client => 
     <SwiperSlide key={client.id} className="client-slide">
       <Link to={client.linkTo} rel="noopener" target="_blank" className="client-link"> 
