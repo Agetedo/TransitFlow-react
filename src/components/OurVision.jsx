@@ -10,6 +10,18 @@ import "swiper/scss/autoplay";
 import "..//styles/OurVision.scss";
 const visionText = <>{"Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition."}</>;
 
+export default function OurVision() {
+  return (
+    <Conteiner className={"vision"}>
+      <TitleCenter
+        caption={"Our Vision"} 
+        title={"Our vision of service"}
+      />
+      <VisionList />
+    </Conteiner>
+  );
+}
+
 function VisionGallery() {
   const visionGalleryList = visionGallery.map(image => 
     <SwiperSlide key={image.id} className="vision-slide">
@@ -67,17 +79,5 @@ function VisionList() {
       <VisionGallery />
       <VisionShowing text={visionText}/>
     </div>
-  );
-}
-
-export default function OurVision() {
-  return (
-    <Conteiner className={"vision"}>
-      <TitleCenter
-        caption={"Our Vision"} 
-        title={"Our vision of service"}
-      />
-      <VisionList />
-    </Conteiner>
   );
 }
