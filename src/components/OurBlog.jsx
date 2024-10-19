@@ -6,6 +6,29 @@ import { blogPosts } from "../DataBase/blogPosts";
 import ButtonLight from "./ButtonLight.jsx";
 import "..//styles/OurBlog.scss";
 
+export default function OurBlog() {
+  const [showMorePosts, setShowMorePosts] = useState(false);
+
+  function handleMorePosts() {
+    setShowMorePosts(!showMorePosts);
+  }
+  return (
+    <Conteiner className={"blog"}>
+      <TitleCenter 
+        caption={"Our Blog"}
+        title={"Our Latest News"}
+      />
+      <BlogItems />
+      {showMorePosts && <BlogItems />}
+      <MorePostButton 
+        buttonText={showMorePosts ? "Hide Latest" : "Our Posts"} 
+        type="button" 
+        onClick={handleMorePosts}
+      />
+    </Conteiner>
+  );
+} 
+
 const blogPostsList = blogPosts.map(post => 
   <div key={post.id} className="blog-post">
     <div className="blog-post__image">
@@ -42,26 +65,3 @@ function MorePostButton({ buttonText, type, onClick }) {
     </div>
   );
 }
-
-export default function OurBlog() {
-  const [showMorePosts, setShowMorePosts] = useState(false);
-
-  function handleMorePosts() {
-    setShowMorePosts(!showMorePosts);
-  }
-  return (
-    <Conteiner className={"blog"}>
-      <TitleCenter 
-        caption={"Our Blog"}
-        title={"Our Latest News"}
-      />
-      <BlogItems />
-      {showMorePosts && <BlogItems />}
-      <MorePostButton 
-        buttonText={showMorePosts ? "Hide Latest" : "Our Posts"} 
-        type="button" 
-        onClick={handleMorePosts}
-      />
-    </Conteiner>
-  );
-} 
