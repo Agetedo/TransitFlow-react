@@ -9,6 +9,18 @@ import "swiper/scss/effect-fade";
 import "swiper/scss/autoplay";
 import "..//styles/Goodness.scss";
 
+export default function Goodness() {
+  return (
+    <Conteiner className={"goodness"}>
+      <TitleCenter
+        caption={"Our Goodness"} 
+        title={"How We Works"}
+      />
+      <GoodnessList />
+    </Conteiner>
+  );
+}
+
 function GoodnessGallery() {
   const goodnessGalleryList = goodnessGallery.map(image => 
     <SwiperSlide key={image.id} className="goodness-slide">
@@ -47,17 +59,5 @@ function GoodnessList() {
       <GoodnessGallery />
       <div className="goodness-list">{goodnessList}</div>
     </div>
-  );
-}
-
-export default function Goodness() {
-  return (
-    <Conteiner className={"goodness"}>
-      <TitleCenter
-        caption={"Our Goodness"} 
-        title={"How We Works"}
-      />
-      <GoodnessList />
-    </Conteiner>
   );
 }
