@@ -29,7 +29,7 @@
   color: var(--white-color);
   text-wrap: pretty;
 }
-//---@media-heading-------------------
+//---@media-heading--------------------
 @media(max-width: 1228px) {
   .heading {
     padding-top: calc(132px + (197 - 132)*((100vw - 320px)/(1228 - 320)));
