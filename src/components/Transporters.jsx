@@ -4,6 +4,18 @@ import TitleCenter from "./TitleCenter";
 import { transporters } from "../DataBase/transporters";
 import "..//styles/Transporters.scss";
 
+export default function Transporters() {
+  return (
+    <Conteiner className={"transporters"}>
+      <TitleCenter 
+        caption={"The Transporters"}
+        title={"Meet Expert Team"}
+      />
+      <TransportersItems />
+    </Conteiner>
+  );
+} 
+
 const membersCardsList = transporters.map(member => 
   <div key={member.id} className="team-card">
     <img src={member.imageSrc} alt="" />
@@ -33,15 +45,3 @@ function TransportersItems() {
     <div className="transporters__items">{membersCardsList}</div>
   );
 }
-
-export default function Transporters() {
-  return (
-    <Conteiner className={"transporters"}>
-      <TitleCenter 
-        caption={"The Transporters"}
-        title={"Meet Expert Team"}
-      />
-      <TransportersItems />
-    </Conteiner>
-  );
-} 
