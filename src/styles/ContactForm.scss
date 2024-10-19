@@ -77,7 +77,7 @@
   text-wrap: pretty;
   color: var(--error-message-text-color);
 }
-//---@media-contact-form--------------
+//---@media-contact-form---------------
 @media(max-width: 1228px) {
   .contact-form {
     padding-top: calc(30px + (90 - 30)*((100vw - 320px)/(1228 - 320)));
