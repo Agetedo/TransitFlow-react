@@ -8,6 +8,32 @@ import modalCloseIcon from "/svg/modal-close-icon.svg";
 import modalEmailLogo from "/email-logo.png";
 import "..//styles/HomeHeading.scss";
 
+export default function HomeHeading({ className, imageUrl, caption, title, text, buttonText }) {
+  const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    if (showModal) {
+      document.body.style.overflow = "hidden";
+    }
+    else {
+      document.body.style.overflowY = "scroll";
+    }
+  }, [showModal]);
+
+  return (
+    <ConteinerBg className={className} imageUrl={imageUrl}>
+      <h3 className="heading__caption">{caption}</h3>
+      <h1 className="heading__title">{title}</h1>
+      <p className="heading__text">{text}</p>
+            
+      <ButtonLight buttonText={buttonText} onClick={() => setShowModal(true)} />
+      {showModal && createPortal(
+        <FlowSubscribe onClose={() => setShowModal(false)}/>, 
+      document.body )}
+    </ConteinerBg>
+  );
+} 
+
 function FlowSubscribeTitle({ title, text }) {
   return(
     <>
@@ -69,29 +95,3 @@ function FlowSubscribe({ onClose }) {
     </div>
   );
 }
-
-export default function HomeHeading({ className, imageUrl, caption, title, text, buttonText }) {
-  const [showModal, setShowModal] = useState(false);
-
-  useEffect(() => {
-    if (showModal) {
-      document.body.style.overflow = "hidden";
-    }
-    else {
-      document.body.style.overflowY = "scroll";
-    }
-  }, [showModal]);
-
-  return (
-    <ConteinerBg className={className} imageUrl={imageUrl}>
-      <h3 className="heading__caption">{caption}</h3>
-      <h1 className="heading__title">{title}</h1>
-      <p className="heading__text">{text}</p>
-            
-      <ButtonLight buttonText={buttonText} onClick={() => setShowModal(true)} />
-      {showModal && createPortal(
-        <FlowSubscribe onClose={() => setShowModal(false)}/>, 
-      document.body )}
-    </ConteinerBg>
-  );
-} 
