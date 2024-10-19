@@ -1,17 +1,11 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import Conteiner from "./Conteiner";
 import { overviewTabs } from "../DataBase/overviewTabs";
 import TitleCenter from "./TitleCenter";
 import "..//styles/AboutUs.scss";
 const ovierviewCaption = <>{"Iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi.Iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi.Iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi."}</>;
-
-function OvierviewCaption({ caption }) {
-  return(
-    <p className="ovierview-caption">{caption}</p>
-  );
-}
 
 export default function AboutUs() {
   const [tabIndex, setTabIndex] = useState(0);
@@ -46,3 +40,9 @@ export default function AboutUs() {
     </Conteiner>
   );
 } 
+
+function OvierviewCaption({ caption }) {
+  return(
+    <p className="ovierview-caption">{caption}</p>
+  );
+}
