@@ -8,7 +8,7 @@ import "swiper/scss";
 import "swiper/scss/effect-creative";
 import "swiper/scss/autoplay";
 import "..//styles/OurVision.scss";
-const visionText = <>{"Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition."}</>;
+const visionText = "Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition. Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition.";
 
 export default function OurVision() {
   return (
