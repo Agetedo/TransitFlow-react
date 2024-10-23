@@ -5,7 +5,7 @@ import Conteiner from "./Conteiner";
 import { overviewTabs } from "../DataBase/overviewTabs";
 import TitleCenter from "./TitleCenter";
 import "..//styles/AboutUs.scss";
-const ovierviewCaption = <>{"Iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi.Iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi.Iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi."}</>;
+const ovierviewCaption = "Iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi.Iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi.Iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam eaque ipsa, quae ab illo inventore veritatis et quasi.";
 
 export default function AboutUs() {
   const [tabIndex, setTabIndex] = useState(0);
