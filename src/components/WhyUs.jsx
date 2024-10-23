@@ -4,8 +4,8 @@ import whyUsImage01 from "/why-us-image01.jpeg";
 import whyUsImage02 from "/why-us-image02.jpeg";
 import { whyUsProfits } from "../DataBase/whyUsProfits";
 import "..//styles/WhyUs.scss";
-const text01 = <>{"In augue ligula, feugiat ut nulla consequat. Ut est lacus, molestie in arcu no, iaculis vehicula ipsum. Nunc faucibus, nisl id dapibus finibus, enim diam interdum."}</>;
-const text02 = <>{"In augue ligula, feugiat ut nulla consequat. Ut est lacus, molestie in arcu no, iaculis vehicula ipsum."}</>;
+const text01 = "In augue ligula, feugiat ut nulla consequat. Ut est lacus, molestie in arcu no, iaculis vehicula ipsum. Nunc faucibus, nisl id dapibus finibus, enim diam interdum.";
+const text02 = "In augue ligula, feugiat ut nulla consequat. Ut est lacus, molestie in arcu no, iaculis vehicula ipsum.";
 
 export default function WhyUs({ className }) {
   return (
