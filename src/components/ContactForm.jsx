@@ -4,7 +4,7 @@ import TitleCenter from "./TitleCenter";
 import ButtonLight from "./ButtonLight";
 import "..//styles/ContactForm.scss";
 import { headerContacts } from "../DataBase/headerContacts";
-const caption = <>{"Duis semper lacus scelerisque, aliquam leo quis, porttitor leo. Etiam lobortis dapibus libero vel. Porttitor nulla tempor elit nec feugiat tempus phasellus."}</>;
+const caption = "Duis semper lacus scelerisque, aliquam leo quis, porttitor leo. Etiam lobortis dapibus libero vel. Porttitor nulla tempor elit nec feugiat tempus phasellus.";
 
 export default function ContactForm() {
   return (
