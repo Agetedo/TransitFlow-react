@@ -8,9 +8,9 @@ import { headerContacts } from "../DataBase/headerContacts";
 import ButtonLight from "./ButtonLight";
 import { headerSocialMenu } from "../DataBase/headerSocialMenu";
 import "..//styles/Footer.scss";
-const footerText = <>{"Leverage agile frameworks to provide a robust synopsis for strategy  collaborative thinking to further the overall value proposition."}</>;
-const copyrightText = <>{"© "}</>;
-const rightText = <>{" TransitFlow. All Rights reserved."}</>;
+const footerText = "Leverage agile frameworks to provide a robust synopsis for strategy  collaborative thinking to further the overall value proposition.";
+const copyrightText = "© ";
+const rightText = " TransitFlow. All Rights reserved.";
 
 export default function Footer() {
   return (
