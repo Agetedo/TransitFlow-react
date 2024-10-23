@@ -2,7 +2,7 @@ import TitleLeft from "./TitleLeft";
 import whyChooseImage from "/why-choose-image.jpeg";
 import { whyChoosePoints } from "../DataBase/whyChoosePoints";
 import "..//styles/WhyChoose.scss";
-const text = <>{"Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition."}</>;
+const text = "Leverage agile frameworks to provide a robust synopsis for strategy foster collaborative thinking to further the overall value proposition.";
 
 export default function WhyChoose() {
   return (
